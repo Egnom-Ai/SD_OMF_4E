@@ -11,7 +11,7 @@ import SwiftUI
 struct SD_OMF_4EApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            WelcomeView()
         }
     }
 }

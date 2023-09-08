@@ -8,17 +8,63 @@
 
 /* Begin PBXBuildFile section */
 		51BAFA602AAA88EA00F9D644 /* SD_OMF_4EApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BAFA5F2AAA88EA00F9D644 /* SD_OMF_4EApp.swift */; };
-		51BAFA622AAA88EA00F9D644 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BAFA612AAA88EA00F9D644 /* ContentView.swift */; };
+		51BAFA622AAA88EA00F9D644 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BAFA612AAA88EA00F9D644 /* WelcomeView.swift */; };
 		51BAFA642AAA88EB00F9D644 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51BAFA632AAA88EB00F9D644 /* Assets.xcassets */; };
 		51BAFA672AAA88EB00F9D644 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51BAFA662AAA88EB00F9D644 /* Preview Assets.xcassets */; };
+		51BAFA702AAA949500F9D644 /* ReadMeFirstSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BAFA6F2AAA949500F9D644 /* ReadMeFirstSheetView.swift */; };
+		51BAFA732AAA953500F9D644 /* DesignListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BAFA722AAA953500F9D644 /* DesignListView.swift */; };
+		51BAFA762AAA95F100F9D644 /* DesignStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BAFA752AAA95F100F9D644 /* DesignStore.swift */; };
+		51BAFA782AAA963600F9D644 /* Design.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BAFA772AAA963600F9D644 /* Design.swift */; };
+		51BAFA7A2AAA974B00F9D644 /* ShapesAISC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BAFA792AAA974B00F9D644 /* ShapesAISC.swift */; };
+		51BAFA7C2AAA980200F9D644 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BAFA7B2AAA980200F9D644 /* Theme.swift */; };
+		51BAFA7E2AAA983800F9D644 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BAFA7D2AAA983800F9D644 /* History.swift */; };
+		51BAFA802AAAC4AC00F9D644 /* NewDesignSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BAFA7F2AAAC4AC00F9D644 /* NewDesignSheet.swift */; };
+		51BAFA822AAAC50900F9D644 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BAFA812AAAC50900F9D644 /* CardView.swift */; };
+		51BAFA842AAAC55000F9D644 /* TrailingIconLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BAFA832AAAC55000F9D644 /* TrailingIconLabelStyle.swift */; };
+		51BAFA862AAAC68700F9D644 /* NewDesignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BAFA852AAAC68700F9D644 /* NewDesignView.swift */; };
+		51BAFA882AAAC72E00F9D644 /* ThemePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BAFA872AAAC72E00F9D644 /* ThemePicker.swift */; };
+		51BAFA8A2AAAC77D00F9D644 /* ThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BAFA892AAAC77D00F9D644 /* ThemeView.swift */; };
+		51BAFA8C2AAAC8F500F9D644 /* EditDesignSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BAFA8B2AAAC8F500F9D644 /* EditDesignSheet.swift */; };
+		51BAFA8E2AAACBFF00F9D644 /* BeamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BAFA8D2AAACBFF00F9D644 /* BeamViewModel.swift */; };
+		51BAFA902AAACC9A00F9D644 /* BeamPropertiesDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BAFA8F2AAACC9A00F9D644 /* BeamPropertiesDetailModel.swift */; };
+		51BAFA922AAACCE000F9D644 /* ColumnViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BAFA912AAACCE000F9D644 /* ColumnViewModel.swift */; };
+		51BAFA942AAACD4200F9D644 /* ColumnPropertiesDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BAFA932AAACD4200F9D644 /* ColumnPropertiesDetailModel.swift */; };
+		51BAFA962AAACDF100F9D644 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BAFA952AAACDF100F9D644 /* Constants.swift */; };
+		51BAFA982AAACE4200F9D644 /* EditDesignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BAFA972AAACE4200F9D644 /* EditDesignView.swift */; };
+		51BAFA9B2AAACEC000F9D644 /* BeamPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BAFA9A2AAACEC000F9D644 /* BeamPickerView.swift */; };
+		51BAFA9D2AAACEE800F9D644 /* ColumnPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BAFA9C2AAACEE800F9D644 /* ColumnPickerView.swift */; };
+		51BAFA9F2AAACF1100F9D644 /* EndPlatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BAFA9E2AAACF1100F9D644 /* EndPlatePickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		51BAFA5C2AAA88EA00F9D644 /* SD_OMF_4E.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SD_OMF_4E.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51BAFA5F2AAA88EA00F9D644 /* SD_OMF_4EApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SD_OMF_4EApp.swift; sourceTree = "<group>"; };
-		51BAFA612AAA88EA00F9D644 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		51BAFA612AAA88EA00F9D644 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		51BAFA632AAA88EB00F9D644 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		51BAFA662AAA88EB00F9D644 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		51BAFA6F2AAA949500F9D644 /* ReadMeFirstSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadMeFirstSheetView.swift; sourceTree = "<group>"; };
+		51BAFA722AAA953500F9D644 /* DesignListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignListView.swift; sourceTree = "<group>"; };
+		51BAFA752AAA95F100F9D644 /* DesignStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignStore.swift; sourceTree = "<group>"; };
+		51BAFA772AAA963600F9D644 /* Design.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Design.swift; sourceTree = "<group>"; };
+		51BAFA792AAA974B00F9D644 /* ShapesAISC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapesAISC.swift; sourceTree = "<group>"; };
+		51BAFA7B2AAA980200F9D644 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		51BAFA7D2AAA983800F9D644 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		51BAFA7F2AAAC4AC00F9D644 /* NewDesignSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDesignSheet.swift; sourceTree = "<group>"; };
+		51BAFA812AAAC50900F9D644 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		51BAFA832AAAC55000F9D644 /* TrailingIconLabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailingIconLabelStyle.swift; sourceTree = "<group>"; };
+		51BAFA852AAAC68700F9D644 /* NewDesignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDesignView.swift; sourceTree = "<group>"; };
+		51BAFA872AAAC72E00F9D644 /* ThemePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemePicker.swift; sourceTree = "<group>"; };
+		51BAFA892AAAC77D00F9D644 /* ThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeView.swift; sourceTree = "<group>"; };
+		51BAFA8B2AAAC8F500F9D644 /* EditDesignSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDesignSheet.swift; sourceTree = "<group>"; };
+		51BAFA8D2AAACBFF00F9D644 /* BeamViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeamViewModel.swift; sourceTree = "<group>"; };
+		51BAFA8F2AAACC9A00F9D644 /* BeamPropertiesDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeamPropertiesDetailModel.swift; sourceTree = "<group>"; };
+		51BAFA912AAACCE000F9D644 /* ColumnViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnViewModel.swift; sourceTree = "<group>"; };
+		51BAFA932AAACD4200F9D644 /* ColumnPropertiesDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnPropertiesDetailModel.swift; sourceTree = "<group>"; };
+		51BAFA952AAACDF100F9D644 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		51BAFA972AAACE4200F9D644 /* EditDesignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDesignView.swift; sourceTree = "<group>"; };
+		51BAFA9A2AAACEC000F9D644 /* BeamPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeamPickerView.swift; sourceTree = "<group>"; };
+		51BAFA9C2AAACEE800F9D644 /* ColumnPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnPickerView.swift; sourceTree = "<group>"; };
+		51BAFA9E2AAACF1100F9D644 /* EndPlatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPlatePickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +98,9 @@
 			isa = PBXGroup;
 			children = (
 				51BAFA5F2AAA88EA00F9D644 /* SD_OMF_4EApp.swift */,
-				51BAFA612AAA88EA00F9D644 /* ContentView.swift */,
+				51BAFA742AAA95CF00F9D644 /* Model */,
+				51BAFA6D2AAA945E00F9D644 /* View */,
+				51BAFA992AAACE8B00F9D644 /* PickerViews */,
 				51BAFA632AAA88EB00F9D644 /* Assets.xcassets */,
 				51BAFA652AAA88EB00F9D644 /* Preview Content */,
 			);
@@ -65,6 +113,67 @@
 				51BAFA662AAA88EB00F9D644 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		51BAFA6D2AAA945E00F9D644 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				51BAFA6E2AAA946F00F9D644 /* WelcomeView */,
+				51BAFA712AAA94D200F9D644 /* DesignListView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		51BAFA6E2AAA946F00F9D644 /* WelcomeView */ = {
+			isa = PBXGroup;
+			children = (
+				51BAFA612AAA88EA00F9D644 /* WelcomeView.swift */,
+				51BAFA6F2AAA949500F9D644 /* ReadMeFirstSheetView.swift */,
+			);
+			path = WelcomeView;
+			sourceTree = "<group>";
+		};
+		51BAFA712AAA94D200F9D644 /* DesignListView */ = {
+			isa = PBXGroup;
+			children = (
+				51BAFA722AAA953500F9D644 /* DesignListView.swift */,
+				51BAFA7F2AAAC4AC00F9D644 /* NewDesignSheet.swift */,
+				51BAFA812AAAC50900F9D644 /* CardView.swift */,
+				51BAFA832AAAC55000F9D644 /* TrailingIconLabelStyle.swift */,
+				51BAFA852AAAC68700F9D644 /* NewDesignView.swift */,
+				51BAFA872AAAC72E00F9D644 /* ThemePicker.swift */,
+				51BAFA892AAAC77D00F9D644 /* ThemeView.swift */,
+				51BAFA8B2AAAC8F500F9D644 /* EditDesignSheet.swift */,
+				51BAFA972AAACE4200F9D644 /* EditDesignView.swift */,
+			);
+			path = DesignListView;
+			sourceTree = "<group>";
+		};
+		51BAFA742AAA95CF00F9D644 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				51BAFA752AAA95F100F9D644 /* DesignStore.swift */,
+				51BAFA772AAA963600F9D644 /* Design.swift */,
+				51BAFA792AAA974B00F9D644 /* ShapesAISC.swift */,
+				51BAFA7B2AAA980200F9D644 /* Theme.swift */,
+				51BAFA7D2AAA983800F9D644 /* History.swift */,
+				51BAFA8D2AAACBFF00F9D644 /* BeamViewModel.swift */,
+				51BAFA8F2AAACC9A00F9D644 /* BeamPropertiesDetailModel.swift */,
+				51BAFA912AAACCE000F9D644 /* ColumnViewModel.swift */,
+				51BAFA932AAACD4200F9D644 /* ColumnPropertiesDetailModel.swift */,
+				51BAFA952AAACDF100F9D644 /* Constants.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		51BAFA992AAACE8B00F9D644 /* PickerViews */ = {
+			isa = PBXGroup;
+			children = (
+				51BAFA9A2AAACEC000F9D644 /* BeamPickerView.swift */,
+				51BAFA9C2AAACEE800F9D644 /* ColumnPickerView.swift */,
+				51BAFA9E2AAACF1100F9D644 /* EndPlatePickerView.swift */,
+			);
+			path = PickerViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +246,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51BAFA622AAA88EA00F9D644 /* ContentView.swift in Sources */,
+				51BAFA7E2AAA983800F9D644 /* History.swift in Sources */,
+				51BAFA732AAA953500F9D644 /* DesignListView.swift in Sources */,
+				51BAFA802AAAC4AC00F9D644 /* NewDesignSheet.swift in Sources */,
+				51BAFA862AAAC68700F9D644 /* NewDesignView.swift in Sources */,
+				51BAFA9B2AAACEC000F9D644 /* BeamPickerView.swift in Sources */,
+				51BAFA982AAACE4200F9D644 /* EditDesignView.swift in Sources */,
+				51BAFA9F2AAACF1100F9D644 /* EndPlatePickerView.swift in Sources */,
+				51BAFA7C2AAA980200F9D644 /* Theme.swift in Sources */,
+				51BAFA622AAA88EA00F9D644 /* WelcomeView.swift in Sources */,
+				51BAFA7A2AAA974B00F9D644 /* ShapesAISC.swift in Sources */,
+				51BAFA8E2AAACBFF00F9D644 /* BeamViewModel.swift in Sources */,
+				51BAFA922AAACCE000F9D644 /* ColumnViewModel.swift in Sources */,
+				51BAFA702AAA949500F9D644 /* ReadMeFirstSheetView.swift in Sources */,
+				51BAFA842AAAC55000F9D644 /* TrailingIconLabelStyle.swift in Sources */,
+				51BAFA962AAACDF100F9D644 /* Constants.swift in Sources */,
+				51BAFA8C2AAAC8F500F9D644 /* EditDesignSheet.swift in Sources */,
+				51BAFA882AAAC72E00F9D644 /* ThemePicker.swift in Sources */,
+				51BAFA9D2AAACEE800F9D644 /* ColumnPickerView.swift in Sources */,
+				51BAFA942AAACD4200F9D644 /* ColumnPropertiesDetailModel.swift in Sources */,
+				51BAFA902AAACC9A00F9D644 /* BeamPropertiesDetailModel.swift in Sources */,
+				51BAFA782AAA963600F9D644 /* Design.swift in Sources */,
 				51BAFA602AAA88EA00F9D644 /* SD_OMF_4EApp.swift in Sources */,
+				51BAFA822AAAC50900F9D644 /* CardView.swift in Sources */,
+				51BAFA8A2AAAC77D00F9D644 /* ThemeView.swift in Sources */,
+				51BAFA762AAA95F100F9D644 /* DesignStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
