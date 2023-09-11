@@ -71,7 +71,9 @@ struct EditDesignSheet: View {
 }
 
 //struct EditDesignSheet_Previews: PreviewProvider {
+//    static var designStore = DesignStore()
+//    
 //    static var previews: some View {
-//        EditDesignSheet()
+//        EditDesignSheet(designStore: designStore, designIndex: )
 //    }
 //}

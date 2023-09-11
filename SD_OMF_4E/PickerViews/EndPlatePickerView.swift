@@ -8,13 +8,23 @@
 import SwiftUI
 
 struct EndPlatePickerView: View {
+    @EnvironmentObject var userSettings: UserSettings
+    @ObservedObject var endPlateViewModel: EndPlateViewModel
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Picker("Please choose a specification", selection: $endPlateViewModel.selectedSpecification) {
+                ForEach(ASTM.Specification.allCases) { specification in
+                    Text(specification.rawValue).tag(specification)
+                }
+            }
+            Text("Selected Specification:\n          ASTM  \(endPlateViewModel.selectedSpecification.rawValue)")
+        }
     }
 }
 
 struct EndPlatePickerView_Previews: PreviewProvider {
     static var previews: some View {
-        EndPlatePickerView()
+        EndPlatePickerView(endPlateViewModel: EndPlateViewModel()).environmentObject(UserSettings())
     }
 }

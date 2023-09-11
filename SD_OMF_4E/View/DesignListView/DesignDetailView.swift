@@ -1,39 +1,54 @@
 //
-//  DesignListView.swift
+//  DesignDetailView.swift
 //  SD_OMF_4E
 //
-//  Created by Gustavo Monge on 9/7/23.
+//  Created by Gustavo Monge on 9/9/23.
 //
 
 import SwiftUI
 
-struct DesignListView: View {
+struct DesignDetailView: View {
     @Environment(\.scenePhase) private var scenePhase
     @ObservedObject private var designStore = DesignStore()
     @State private var showNewDesignSheet = false
+    var design: Design
 
     var body: some View {
-        NavigationStack {
-            List {
-                ForEach(designStore.designs.indices, id: \.self) { index in
-                    NavigationLink(destination: DesignDetailView(design: designStore.designs[index])) {
-                        CardView(design: designStore.designs[index])
-                    }
-                    .listRowBackground(designStore.designs[index].theme.mainColor)
+        
+        ZStack{
+            //            Color.indigo.edgesIgnoringSafeArea(.all)
+            //                .opacity(0.50)
+            NavigationStack {
+                VStack {
+                    
+                    Text("Connection Details")
+                        .font(.title)
+                        .padding()
+                    
+                    Text("Project: \(design.project)")
+                    // Display other properties
+                    Text("Beam Section: \(design.beam.AISC_Manual_Label)")
+                    Text("Column Section: \(design.column.AISC_Manual_Label)")
+                    Text("Theme Color: \(design.theme.rawValue)")
                 }
-                .onDelete(perform: deleteDesign) // Add this line
+                .frame(maxWidth:.infinity, maxHeight: .infinity)
+                .background(design.theme.mainColor)
+    //        .ignoresSafeArea()
             }
-            .navigationTitle("Steel Connections")
+            .navigationTitle("Designs")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button("New Design") {
+                    Button("Edit Data") {
                         showNewDesignSheet.toggle()
                     }
                 }
             }
             .sheet(isPresented: $showNewDesignSheet) {
-                NewDesignSheet(designStore: designStore)
+                if let designIndex = designStore.designs.firstIndex(where: { $0.id == design.id }) {
+                    EditDesignSheet(designStore: designStore, designIndex: designIndex)
+                }
             }
+
         }
         .onChange(of: scenePhase) { phase in
             if phase == .inactive {
@@ -75,8 +90,10 @@ struct DesignListView: View {
     }
 }
 
-struct DesignListView_Previews: PreviewProvider {
+struct DesignDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DesignListView()
+        // Sample data for preview
+        let sampleDesign = Design.sampleData[0]
+        return DesignDetailView(design: sampleDesign)
     }
 }
