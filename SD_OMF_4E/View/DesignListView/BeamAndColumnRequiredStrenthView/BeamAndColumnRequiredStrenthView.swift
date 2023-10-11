@@ -10,7 +10,7 @@ import SwiftUI
 struct BeamAndColumnRequiredStrenthView: View {
     var body: some View {
         NavigationStack{
-            Form {
+            List {
                 NavigationLink("Input: Column Required Strength,   LFRD"){
                     ColumnRequiredStrengthInputView()
                 }.foregroundColor(.blue)

@@ -12,6 +12,7 @@ struct DesignDetailView: View {
     @ObservedObject private var designStore = DesignStore()
     @State private var showNewDesignSheet = false
     var design: Design
+    var model: AnalysisModelClass
 
     var body: some View {
         
@@ -20,7 +21,7 @@ struct DesignDetailView: View {
             //                .opacity(0.50)
             NavigationStack {
                 VStack {
-                    
+                    Spacer()
                     Text("Connection Details")
                         .font(.title)
                         .padding()
@@ -30,6 +31,19 @@ struct DesignDetailView: View {
                     Text("Beam Section: \(design.beam.AISC_Manual_Label)")
                     Text("Column Section: \(design.column.AISC_Manual_Label)")
                     Text("Theme Color: \(design.theme.rawValue)")
+                    
+                    Spacer()
+                    
+                    Button(action: {
+                        model.connectionDesign()
+                    }, label: {
+                        HStack{
+                            Text("Design Check")
+                            Image(systemName: "wand.and.rays.inverse")
+                        }
+                        //Image(systemName: "arrow.triangle.2.circlepath")
+                    }).buttonStyle(.borderedProminent)
+                    
                 }
                 .frame(maxWidth:.infinity, maxHeight: .infinity)
                 .background(design.theme.mainColor)
@@ -94,6 +108,7 @@ struct DesignDetailView_Previews: PreviewProvider {
     static var previews: some View {
         // Sample data for preview
         let sampleDesign = Design.sampleData[0]
-        return DesignDetailView(design: sampleDesign)
+        let model = AnalysisModelClass()
+        return DesignDetailView(design: sampleDesign, model: model)
     }
 }

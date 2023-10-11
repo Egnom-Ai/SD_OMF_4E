@@ -29,20 +29,11 @@ struct NewDesignView: View {
                     ThemePicker(selection: $selectedTheme)
                 }
                 
-                Section(header: Text("Beam & Column")) {
-                    NavigationLink("Select Beam & Column"){
+                Section(header: Text("Connection Details")) {
+                    NavigationLink("Connection Details"){
                         DesignView()
-//                        BeamAndColumnSelectionView(beamViewModel: beamViewModel, columnViewModel: columnViewModel)
                         }
                     }
-                
-                Section(header: Text("Beam & Column Required Strenth")) {
-                    NavigationLink("Beam & Column Required Strenth"){
-                        BeamAndColumnRequiredStrenthView()
-                        }
-                    }
-                
-                
                 }                
             }
         }

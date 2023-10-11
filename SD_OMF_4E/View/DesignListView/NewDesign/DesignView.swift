@@ -17,50 +17,52 @@ struct DesignView: View {
 
     var body: some View {
         VStack {
-            List {
-                Section(header: Text("Beam & Column Data")) {
-                    NavigationStack{
-                        NavigationLink("Select Beam & Column Sections") {
-                            BeamAndColumnSelectionView(beamViewModel: beamViewModel, columnViewModel: columnViewModel)
+            NavigationStack{
+                List {
+                    Section(header: Text("Beam & Column Data")) {
+                        NavigationStack{
+                            NavigationLink("Select Beam & Column Sections") {
+                                BeamAndColumnSelectionView(beamViewModel: beamViewModel, columnViewModel: columnViewModel)
+                            }
+                            .foregroundColor(.blue)
                         }
-                        .foregroundColor(.blue)
+                        
+//                        NavigationStack{
+                            let beamPropertiesDetails = BeamProperties.Details(Lb_ft: 30.0, Fyb: 50.0, Fub: 65.0) // Create an instance
+                            let beamPropertiesDetailModel = BeamPropertiesDetailModel(beamPropertiesDetails: beamPropertiesDetails)
+                            
+                            NavigationLink("Length and Height of Beam & Column") {
+                                BeamLengthAndColumnHeightView(beamViewModel: beamViewModel, beamPropertiesDetailModel: beamPropertiesDetailModel)
+                            }
+                            .foregroundColor(.blue)
+  //                      }
                     }
                     
-                    NavigationStack{
-                        let beamPropertiesDetails = BeamProperties.Details(Lb_ft: 30.0, Fyb: 50.0, Fub: 65.0) // Create an instance
-                        let beamPropertiesDetailModel = BeamPropertiesDetailModel(beamPropertiesDetails: beamPropertiesDetails)
-                        
-                        NavigationLink("Length and Height of Beam & Column") {
-                            BeamLengthAndColumnHeightView(beamViewModel: beamViewModel, beamPropertiesDetailModel: beamPropertiesDetailModel)
-                        }
-                        .foregroundColor(.blue)
+                    Section(header: Text("Plates & Bolts Specification")) {
+//                        NavigationStack{
+                            NavigationLink("End-Plate & Stiffener ASTM ") {
+                                EndPlatePickerView(endPlateViewModel: endPlateViewModel)
+                            }
+                            .foregroundColor(.blue)
+ //                       }
+ //                       NavigationStack {
+                            NavigationLink("Bolts AISC Group: ") {
+                                BoltPickerView(boltViewModel: boltViewModel)
+                            }
+                            .foregroundColor(.blue)
+  //                      }
                     }
+                    
+                    Section(header: Text("Beam & Column Required Strengh")) {
+ //                       NavigationStack{
+                            NavigationLink("Beam & Column Required Strengh") {
+                                BeamAndColumnRequiredStrenthView()
+                            }
+                            .foregroundColor(.blue)
+ //                       }
+                    }
+                    
                 }
-                
-                Section(header: Text("Plates & Bolts Specification")) {
-                    NavigationStack{
-                        NavigationLink("End-Plate & Stiffener ASTM ") {
-                            EndPlatePickerView(endPlateViewModel: endPlateViewModel)
-                        }
-                        .foregroundColor(.blue)
-                    }
-                    NavigationStack {
-                        NavigationLink("Bolts AISC Group: ") {
-                            BoltPickerView(boltViewModel: boltViewModel)
-                        }
-                        .foregroundColor(.blue)
-                    }
-                }
-                
-                Section(header: Text("Beam & Column Required Strengh")) {
-                    NavigationStack{
-                        NavigationLink("Beam & Column Required Strengh") {
-                            BeamAndColumnRequiredStrenthView()
-                        }
-                        .foregroundColor(.blue)
-                    }
-                }
-                
             }
             .navigationTitle("8ES:  OMF EEPM")
         }

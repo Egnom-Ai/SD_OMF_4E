@@ -11,12 +11,13 @@ struct DesignListView: View {
     @Environment(\.scenePhase) private var scenePhase
     @ObservedObject private var designStore = DesignStore()
     @State private var showNewDesignSheet = false
+    @State private var model = AnalysisModelClass()
 
     var body: some View {
         NavigationStack {
             List {
                 ForEach(designStore.designs.indices, id: \.self) { index in
-                    NavigationLink(destination: DesignDetailView(design: designStore.designs[index])) {
+                    NavigationLink(destination: DesignDetailView(design: designStore.designs[index], model: model)) {
                         CardView(design: designStore.designs[index])
                     }
                     .listRowBackground(designStore.designs[index].theme.mainColor)

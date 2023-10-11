@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51553FB82AD70963008A6D99 /* AnalysisModelClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51553FB72AD70963008A6D99 /* AnalysisModelClass.swift */; };
 		5197C6D22AAD2456005BE65E /* DesignDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5197C6D12AAD2456005BE65E /* DesignDetailView.swift */; };
 		5197C6D42AAD4BB9005BE65E /* BeamAndColumnSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5197C6D32AAD4BB9005BE65E /* BeamAndColumnSelectionView.swift */; };
 		5197C6D62AAD4C06005BE65E /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5197C6D52AAD4C06005BE65E /* UserSettings.swift */; };
@@ -30,6 +31,7 @@
 		5197C7022AAF1E34005BE65E /* ColumnHeightInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5197C7012AAF1E34005BE65E /* ColumnHeightInputView.swift */; };
 		5197C7042AAF1E72005BE65E /* ColumnHeightDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5197C7032AAF1E72005BE65E /* ColumnHeightDisplayView.swift */; };
 		5197C7062AAF1EC3005BE65E /* BoltPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5197C7052AAF1EC3005BE65E /* BoltPickerView.swift */; };
+		5197C7092AAF2689005BE65E /* AnalysisModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5197C7082AAF2689005BE65E /* AnalysisModel.swift */; };
 		51BAFA602AAA88EA00F9D644 /* SD_OMF_4EApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BAFA5F2AAA88EA00F9D644 /* SD_OMF_4EApp.swift */; };
 		51BAFA622AAA88EA00F9D644 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BAFA612AAA88EA00F9D644 /* WelcomeView.swift */; };
 		51BAFA642AAA88EB00F9D644 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51BAFA632AAA88EB00F9D644 /* Assets.xcassets */; };
@@ -60,6 +62,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		51553FB72AD70963008A6D99 /* AnalysisModelClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisModelClass.swift; sourceTree = "<group>"; };
 		5197C6D12AAD2456005BE65E /* DesignDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignDetailView.swift; sourceTree = "<group>"; };
 		5197C6D32AAD4BB9005BE65E /* BeamAndColumnSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeamAndColumnSelectionView.swift; sourceTree = "<group>"; };
 		5197C6D52AAD4C06005BE65E /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
@@ -83,6 +86,7 @@
 		5197C7012AAF1E34005BE65E /* ColumnHeightInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnHeightInputView.swift; sourceTree = "<group>"; };
 		5197C7032AAF1E72005BE65E /* ColumnHeightDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnHeightDisplayView.swift; sourceTree = "<group>"; };
 		5197C7052AAF1EC3005BE65E /* BoltPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoltPickerView.swift; sourceTree = "<group>"; };
+		5197C7082AAF2689005BE65E /* AnalysisModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisModel.swift; sourceTree = "<group>"; };
 		51BAFA5C2AAA88EA00F9D644 /* SD_OMF_4E.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SD_OMF_4E.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51BAFA5F2AAA88EA00F9D644 /* SD_OMF_4EApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SD_OMF_4EApp.swift; sourceTree = "<group>"; };
 		51BAFA612AAA88EA00F9D644 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
@@ -181,8 +185,8 @@
 		5197C7072AAF212B005BE65E /* EditDesign */ = {
 			isa = PBXGroup;
 			children = (
-				51BAFA8B2AAAC8F500F9D644 /* EditDesignSheet.swift */,
 				51BAFA972AAACE4200F9D644 /* EditDesignView.swift */,
+				51BAFA8B2AAAC8F500F9D644 /* EditDesignSheet.swift */,
 			);
 			path = EditDesign;
 			sourceTree = "<group>";
@@ -263,6 +267,8 @@
 		51BAFA742AAA95CF00F9D644 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5197C7082AAF2689005BE65E /* AnalysisModel.swift */,
+				51553FB72AD70963008A6D99 /* AnalysisModelClass.swift */,
 				51BAFA752AAA95F100F9D644 /* DesignStore.swift */,
 				51BAFA772AAA963600F9D644 /* Design.swift */,
 				51BAFA792AAA974B00F9D644 /* ShapesAISC.swift */,
@@ -367,6 +373,7 @@
 				5197C6D42AAD4BB9005BE65E /* BeamAndColumnSelectionView.swift in Sources */,
 				5197C6DE2AAD4CE6005BE65E /* ColumnDetailsView.swift in Sources */,
 				5197C7022AAF1E34005BE65E /* ColumnHeightInputView.swift in Sources */,
+				5197C7092AAF2689005BE65E /* AnalysisModel.swift in Sources */,
 				51BAFA7E2AAA983800F9D644 /* History.swift in Sources */,
 				51BAFA732AAA953500F9D644 /* DesignListView.swift in Sources */,
 				51BAFA802AAAC4AC00F9D644 /* NewDesignSheet.swift in Sources */,
@@ -398,6 +405,7 @@
 				5197C6F72AAF1C7C005BE65E /* EndPlateViewModel.swift in Sources */,
 				5197C7062AAF1EC3005BE65E /* BoltPickerView.swift in Sources */,
 				5197C6FE2AAF1DC4005BE65E /* BeamLenghtInputView.swift in Sources */,
+				51553FB82AD70963008A6D99 /* AnalysisModelClass.swift in Sources */,
 				5197C6E42AAF1301005BE65E /* BeamAndColumnRequiredStrenthView.swift in Sources */,
 				51BAFA942AAACD4200F9D644 /* ColumnPropertiesDetailModel.swift in Sources */,
 				51BAFA902AAACC9A00F9D644 /* BeamPropertiesDetailModel.swift in Sources */,

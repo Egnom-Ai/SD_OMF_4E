@@ -18,41 +18,50 @@ struct EditDesignView: View {
     @State private var isPresentingColumnPicker = false
     
     var body: some View {
-        Form {
-            Section(header: Text("Project Name")) {
-                TextField("Name", text: $designTitle)
-            }
-            
-            Section(header: Text("Theme")) {
-                ThemePicker(selection: $selectedTheme)
-            }
-            
-            Section(header: Text("Beam Properties")) {
-                Button(beamViewModel.selectedBeamId.isEmpty ? "Select Beam" : "Selected: \(beamViewModel.selectedBeamId)") {
-                    isPresentingBeamPicker.toggle()
-                }
-                .sheet(isPresented: $isPresentingBeamPicker) {
-                    BeamPickerView(selectedBeamId: $beamViewModel.selectedBeamId, isPresentingPicker: $isPresentingBeamPicker)
+        NavigationStack{
+            Form {
+                Section(header: Text("Project Name")) {
+                    TextField("Name", text: $designTitle)
                 }
                 
-                if let selectedBeamProperties = beamViewModel.selectedBeamProperties {
-                    Text("AISC Manual Label: \(selectedBeamProperties.AISC_Manual_Label)")
-                    // ... other properties
-                }
-            }
-            // Add this section for the Column Properties
-            Section(header: Text("Column Properties")) {
-                Button(columnViewModel.selectedColumnId.isEmpty ? "Select Column" : "Selected: \(columnViewModel.selectedColumnId)") {
-                    isPresentingColumnPicker.toggle()
-                }
-                .sheet(isPresented: $isPresentingColumnPicker) {
-                    ColumnPickerView(selectedColumnId: $columnViewModel.selectedColumnId, isPresentingPicker: $isPresentingColumnPicker, selectedBeamBf: beamViewModel.selectedBeamProperties?.bf)
+                Section(header: Text("Theme")) {
+                    ThemePicker(selection: $selectedTheme)
                 }
                 
-                if let selectedColumnProperties = columnViewModel.selectedColumnProperties {
-                    Text("AISC Manual Label: \(selectedColumnProperties.AISC_Manual_Label)")
-                    // ... other properties
+                Section(header: Text("Connection Details")) {
+                    NavigationLink("Connection Details"){
+                        DesignView()
+                    }
                 }
+                
+                
+                //            Section(header: Text("Beam Properties")) {
+                //                Button(beamViewModel.selectedBeamId.isEmpty ? "Select Beam" : "Selected: \(beamViewModel.selectedBeamId)") {
+                //                    isPresentingBeamPicker.toggle()
+                //                }
+                //                .sheet(isPresented: $isPresentingBeamPicker) {
+                //                    BeamPickerView(selectedBeamId: $beamViewModel.selectedBeamId, isPresentingPicker: $isPresentingBeamPicker)
+                //                }
+                //
+                //                if let selectedBeamProperties = beamViewModel.selectedBeamProperties {
+                //                    Text("AISC Manual Label: \(selectedBeamProperties.AISC_Manual_Label)")
+                //                    // ... other properties
+                //                }
+                //            }
+                //            // Add this section for the Column Properties
+                //            Section(header: Text("Column Properties")) {
+                //                Button(columnViewModel.selectedColumnId.isEmpty ? "Select Column" : "Selected: \(columnViewModel.selectedColumnId)") {
+                //                    isPresentingColumnPicker.toggle()
+                //                }
+                //                .sheet(isPresented: $isPresentingColumnPicker) {
+                //                    ColumnPickerView(selectedColumnId: $columnViewModel.selectedColumnId, isPresentingPicker: $isPresentingColumnPicker, selectedBeamBf: beamViewModel.selectedBeamProperties?.bf)
+                //                }
+                //
+                //                if let selectedColumnProperties = columnViewModel.selectedColumnProperties {
+                //                    Text("AISC Manual Label: \(selectedColumnProperties.AISC_Manual_Label)")
+                //                    // ... other properties
+                //                }
+                //            }
             }
         }
     }
